@@ -1,5 +1,6 @@
 Gekibun::Application.routes.draw do
   root :to => "cards#index"
+  get "cards/card"
   
   resources :cards
   

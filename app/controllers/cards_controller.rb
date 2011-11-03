@@ -6,16 +6,17 @@ class CardsController < ApplicationController
     @card = Card.new
   end
 
-  def show
-    @card = Card.all
-  end
-
   def create
-    @card = Card.create(param[:card])
-    redirect_to @card
+    @card = Card.create(params[:card])
+    redirect_to "/cards/new"
   end
 
   def card
-  end
+  @card = Card.all
 
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @card }
+    end
+  end
 end
