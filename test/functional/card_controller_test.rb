@@ -1,23 +1,23 @@
 require 'test_helper'
 
-class PostControllerTest < ActionController::TestCase
+class CardControllerTest < ActionController::TestCase
   test "should get index" do
     get :index
     assert_response :success
   end
 
-  test "should get view" do
-    get :view
+  test "should get new" do
+    get :new
     assert_response :success
   end
 
-  test "should get edit" do
-    get :edit
+  test "should get show" do
+    get :show
     assert_response :success
   end
 
-  test "should get created" do
-    get :created
+  test "should get create" do
+    get :create
     assert_response :success
   end
 

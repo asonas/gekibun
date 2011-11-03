@@ -1,4 +1,20 @@
 Gekibun::Application.routes.draw do
+  get "card/index"
+
+  get "card/new"
+
+  get "card/show"
+
+  get "card/create"
+
+  get "card/card"
+
+  get "post/new"
+
+  get "post/show"
+
+  get "post/create"
+
   get "post/index"
 
   get "post/view"
