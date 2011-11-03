@@ -12,11 +12,11 @@ class CardsController < ApplicationController
   end
 
   def card
-  @card = Card.all
+    @card = Card.all
 
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @card }
+     format.xml  { render :xml => @card }
     end
   end
 end
