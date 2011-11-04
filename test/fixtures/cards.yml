@@ -2,6 +2,8 @@
 
 one:
   message: MyText
+  tweet_id: 1
 
 two:
   message: MyText
+  tweet_id: 1
