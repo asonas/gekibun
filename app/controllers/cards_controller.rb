@@ -30,8 +30,12 @@ class CardsController < ApplicationController
     #db_path = "/home/asonas/www/gekibun/db/development.sqlite3"
     search = Twitter::Search.new
     search.containing("#津山弥生祭").language("ja").result_type("recent").each do |r|
-      card = Card.new(:message => r.text, :tweet_id => r.id)
-      card.save
+      #hoge = db.execute('select * from cards where tweet_id = ?', r.id)
+      card = Card.find_by_tweet_id(r.id)
+      if card.empty?
+        card = Card.new(:message => r.text, :tweet_id => r.id)
+        card.save
+      end
       #db = SQLite3::Database.new(db_path)
       #hoge = db.execute('select * from cards where tweet_id = ?', r.id)
       #db.close
