@@ -7,6 +7,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-
-
-Card.create(:commnent_body => 'こめんと')
+i = 1
+100.times{
+  Card.create(:message => 'コメントテスト')
+}
