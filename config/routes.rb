@@ -1,6 +1,7 @@
 Gekibun::Application.routes.draw do
   root :to => "cards#index"
-  get "cards/card"
+  get "cards/card" => "cards#card"
+  get "cards/batch" => "cards#batch"
   
   resources :cards
   
