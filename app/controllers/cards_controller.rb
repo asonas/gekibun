@@ -32,7 +32,7 @@ class CardsController < ApplicationController
     search.containing("#津山弥生祭").language("ja").result_type("recent").each do |r|
       #hoge = db.execute('select * from cards where tweet_id = ?', r.id)
       card = Card.find_by_tweet_id(r.id)
-      if card.empty?
+      if card.nil?
         card = Card.new(:message => r.text, :tweet_id => r.id)
         card.save
       end
