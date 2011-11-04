@@ -11,10 +11,10 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111103170154) do
+ActiveRecord::Schema.define(:version => 20111104145737) do
 
   create_table "cards", :force => true do |t|
-    t.text     "commnent_body"
+    t.text     "message"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
