@@ -1,12 +1,4 @@
-<h1>コメントの追加</h1>
-<%= javascript_include_tag "cards" %>
 <%= form_for @card do |form| %>
-<ul>
-  <li><%= form.label :message, "コメント" %><%= form.text_field :message %></li>
-  <li><%= form.submit "送信" %></li>
-</ul>
-<div class>
-cliccccccccccccccccc
-</div>
-
+<%= form.text_field :message %>
+<%= form.submit "つぶやく" %>
 <% end %>
