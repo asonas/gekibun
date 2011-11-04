@@ -15,7 +15,11 @@ class CardsController < ApplicationController
   end
 
   def card
-    @card = Card.all
+    if params[:id]
+      @card = Card.find_by_big_id(params[:id])
+    else
+      @card = Card.all
+    end
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @card }
