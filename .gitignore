@@ -1,6 +1,7 @@
-.bundle
+B1;2c.bundle
 db/*.sqlite3
 log/*.log
 tmp/
 .sass-cache/
 unicorn.pid
+.DS_Store
