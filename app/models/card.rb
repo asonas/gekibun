@@ -3,4 +3,6 @@ class Card < ActiveRecord::Base
     lambda {|id|
       where "id > ?", id
     }
+  validates :message, :presence => true,  
+  :length => {:minimum => 2}  
 end
