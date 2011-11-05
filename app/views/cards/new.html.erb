@@ -1,6 +1,42 @@
-<header><img src="/logo_x2.png" width="320"></header>
+<style>
+body{
+}
+#desc {
+  font-size: 80%;
+  color: #877463;
+}
 
+input {
+  width: 100%;
+  margin: 5 auto;
+}
+input[type="text"] {
+  width: 290px;
+}
+
+input:last-child{
+  margin-bottom: 10px;
+}
+
+.inner{
+  width: 290px;
+  
+}
+</style>
+
+<header><img src="/logo_x2.png" width="300"></header>
+<div class="inner">
 <%= form_for @card do |form| %>
-<%= form.text_field :message %>
+<%= form.text_field :message %><br />
 <%= form.submit "つぶやく" %>
 <% end %>
+<div class>
+<div id="desc">
+「つぶやく」と一般棟2Fシステム研究部のスクリーンに発言が発信されます！<br />
+また、Twitterでハッシュタグ #津山弥生祭 を付けてもツイートでも良いです。<br />
+<br />
+弥生祭での面白いことをどんどん書きこんでください！！
+</div>
+<img src="/map_x2.png" width="300">
+
+</div>

@@ -28,7 +28,7 @@ class CardsController < ApplicationController
   
   def batch
     #NG
-    pattarn = "/(ちんこ)|(チンコ)|(まんこ)|(マンコ)|(馬鹿)|(バカ)|(死ね)|(レイプ)|(うざい)|(厨)|()|()|()|()|()|()|()|()|()|()|/"
+    pattarn = "/(ちんこ)|(チンコ)|(まんこ)|(マンコ)|(馬鹿)|(バカ)|(死ね)|(レイプ)|(うざい)|(厨)|(エロ)/"
     
     search = Twitter::Search.new
     search.containing("#津山弥生祭").language("ja").result_type("recent").each do |r|
