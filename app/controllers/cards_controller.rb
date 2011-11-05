@@ -27,26 +27,16 @@ class CardsController < ApplicationController
   end
   
   def batch
-    #db_path = "/home/asonas/www/gekibun/db/development.sqlite3"
+    #NG
+    pattarn = "/(ちんこ)|(チンコ)|(まんこ)|(マンコ)|(馬鹿)|(バカ)|(死ね)|(レイプ)|(うざい)|(厨)|()|()|()|()|()|()|()|()|()|()|/"
+    
     search = Twitter::Search.new
     search.containing("#津山弥生祭").language("ja").result_type("recent").each do |r|
-      #hoge = db.execute('select * from cards where tweet_id = ?', r.id)
       card = Card.find_by_tweet_id(r.id)
       if card.nil?
-        card = Card.new(:message => r.text, :tweet_id => r.id)
+        card = Card.new(:message => r.text, :tweet_id => r.id, :twitter_user_id => r.from_user_id, :twitter_user_name => r.from_user)
         card.save
       end
-      #db = SQLite3::Database.new(db_path)
-      #hoge = db.execute('select * from cards where tweet_id = ?', r.id)
-      #db.close
-      #if card.empty?
-        #Card.create(:message => r.text, :tweer_id => r.id)
-        #insdb = SQLite3::Database.new(db_path)
-        ##new_item = {:message => r.text, :tweet_id => r.id}
-        #sql = "insert into cards values (:id, :message, :tweet_id, :created_at, :updated_at)"
-        #insdb.execute(sql, new_item)
-        #insdb.close
-      #end
     end
   end
 end

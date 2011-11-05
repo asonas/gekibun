@@ -11,11 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111104170112) do
+ActiveRecord::Schema.define(:version => 20111104235707) do
 
   create_table "cards", :force => true do |t|
     t.text     "message"
     t.integer  "tweet_id"
+    t.integer  "twitter_user_id"
+    t.text     "twitter_user_name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

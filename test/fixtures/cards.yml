@@ -3,7 +3,11 @@
 one:
   message: MyText
   tweet_id: 1
+  twitter_user_id: 1
+  twitter_user_name: MyText
 
 two:
   message: MyText
   tweet_id: 1
+  twitter_user_id: 1
+  twitter_user_name: MyText
