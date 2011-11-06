@@ -8,9 +8,6 @@ class CardsController < ApplicationController
   end
 
   def create
-    @card = Card.new(params[:card])
-    
-    @card.save
     redirect_to "/cards/new"
   end
 
@@ -27,9 +24,6 @@ class CardsController < ApplicationController
   end
   
   def batch
-    #NG
-    pattarn = "/(ちんこ)|(チンコ)|(まんこ)|(マンコ)|(馬鹿)|(バカ)|(死ね)|(レイプ)|(うざい)|(厨)|(エロ)/"
-    
     search = Twitter::Search.new
     search.containing("#津山弥生祭").language("ja").result_type("recent").each do |r|
       card = Card.find_by_tweet_id(r.id)
